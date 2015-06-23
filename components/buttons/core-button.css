@@ -96,9 +96,13 @@ nav, a, button {
 /* ----------------------- Font colors and sizes ---------------------- */
 /* White text on dark backgrounds */
 /* Dark text on light backgrounds */
+/* Base element styles */
 /**
  * Use with every animation and transition so we can have a
  * global animation speed toggler (i.e., for visual UI testing)
+ */
+/*
+ * Easing functions
  */
 [class^="page-section_"] {
   width: 100%;
@@ -137,11 +141,25 @@ nav, a, button {
   justify-content: flex-end; }
 
 html,
-body,
+body {
+  width: 100%;
+  min-height: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 16px;
+  background-color: whitesmoke; }
+
 .main-view-container {
+  position: relative;
   width: 100vw;
-  height: 100vh;
-  font-size: 16px; }
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 /* ==========================================================================
    Helper classes

@@ -15,5 +15,8 @@
   ],
   "dependencies": {
     "modernizer": "~2.8.2"
+  },
+  "devDependencies": {
+    "trianglify": "~0.2.1"
   }
 }
