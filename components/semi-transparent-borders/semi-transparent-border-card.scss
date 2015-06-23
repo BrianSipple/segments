@@ -1,0 +1,27 @@
+@import '../../styles/main';
+
+$card-width_default: 20em;
+
+body {
+    background-color: mediumpurple;
+}
+
+
+.card {
+    max-width: $card-width_default;
+    padding: 1.5em 2em;
+    margin: 2em auto 0;
+    text-align: center;
+    background-color: $background-color_primary__content;
+    font: 100%/1.5 sans-serif;
+
+
+    &.semi-trans {
+        border: 10px solid hsla(0, 0%, 100%, 0.5);
+        background-clip: padding-box;
+    }
+}
+
+
+
+

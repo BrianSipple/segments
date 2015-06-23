@@ -1,0 +1,15 @@
+body {
+  background-color: #a3ffc3; }
+
+.sentiment {
+  margin: 1.2em auto;
+  background-color: #fdfbaa;
+  text-align: center;
+  padding: 1.1em;
+  border-radius: .8em;
+  box-shadow: 0 0 0 .4em #655;
+  outline: .6em solid #655;
+  width: 25em;
+  height: 12em; }
+
+/*# sourceMappingURL=inner-rounding.css.map */

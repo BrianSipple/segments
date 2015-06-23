@@ -1,0 +1,6 @@
+.alert-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50% 50% 0 50%;
+    background-color: yellow;
+}
