@@ -1,0 +1,15 @@
+@import '../../lib/styles/application';
+@import 'base-variables';
+@import 'line-patterns';
+@import 'polka-dot';
+@import 'checkerboard';
+
+body {
+    background-color: $background-color__page--primary;
+}
+
+[class*="patterned-box"] {
+  margin: 2em auto;
+  width: $patterned-box__width;
+  height: $patterned-box__height;
+}

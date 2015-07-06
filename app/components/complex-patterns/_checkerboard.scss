@@ -1,0 +1,25 @@
+$checkerboard__color-1: hsla(17, 100%, 23%, 1);
+$checkerboard__color-2: hsla(43, 100%, 71%, 1);
+$checkerboard__box-length: $patterned-box__width / 10;
+
+@mixin checkerboard($size, $base-color, $accent-color: $checkerboard__color-2) {
+
+  background-color: $base-color;
+  background-image:
+    linear-gradient(45deg,
+            $accent-color 25%, transparent 0,  // triangle +
+            transparent 75%, $accent-color 0    // flipped-triangle = square
+    ),
+    linear-gradient(45deg,
+            $accent-color 25%, transparent 0,
+            transparent 75%, $accent-color 0
+    );
+
+  background-position: 0 0, $size $size;   // move the second gradient by the tile size to create a second, identical square at the first square's top-right edge
+  background-size: 2*$size 2*$size;
+
+}
+
+.patterned-box__checkerboard {
+  @include checkerboard($checkerboard__box-length, $checkerboard__color-1, $checkerboard__color-2);
+}

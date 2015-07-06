@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo 'Starting SASS watch'
-sass --watch styles:styles components:components
+sass --watch app/main.scss:app/main.css app/components:app/components

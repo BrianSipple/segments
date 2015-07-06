@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Card Expansion Effect -- Circles</title>
+    <meta name="description" content="Card Expansion Effect with SVG clipPath"/>
+    <meta name="keywords" content="clipPath, svg, effect, layout, expansion, images, grid, polygon"/>
+    <meta name="author" content="Brian Sipple"/>
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="main.css">
+    <!--[if IE]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script>
+        if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+            var root = document.getElementsByTagName('html')[0];
+            root.setAttribute('class', 'ff');
+        }
+        ;
+    </script>
+</head>
+<body>
+<div class="main-view-container">
+
+    <section class="page__section__card-grid">
+
+        <div class="container__grid">
+
+            <!-- trianglify pattern container -->
+            <div class="pattern paterrn--hidden"></div>
+
+            <!-- Cards! -->
+            <div class="wrapper">
+
+                <div class="card">
+                    <div class="card__container card__container--closed">
+
+                        <section class="card__section__header">
+                            <svg class="card__header-image" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+                                 preserveAspectRatio="xMidYMid slice">
+                                <!-- SVG Image -->
+                                <defs>
+                                    <clipPath id="clipPath1">
+                                        <!-- r = 992 hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath1)" width="1920" height="500"
+                                       xlink:href="/app/img/story-cards/a.png"></image>
+                            </svg>
+                        </section>
+
+                        <section class="card__section__content">
+
+                            <i class="card__button-close fa fa-times">X</i>
+
+                            <div class="card__caption-container">
+                                <h1 class="card__title">Library of Athens</h1>
+                                <p class="card__subtitle">The Knowledge Wonder of the World</p>
+                            </div>
+
+                            <div class="card__text-container">
+
+                                <div class="meta">
+                                    <img class="meta__avatar" src="/app/img/authors/brian.jpeg" alt="Brian"/>
+                                    <span class="meta__author">Brian Sipple</span>
+                                    <span class="meta__date">09/30/1589</span>
+                                </div>
+
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer possim tempor seacula
+                                    formas lectorum dolor dolor tincidunt eum gothica euismod parum vel est in hendrerit
+                                    dolore mazim facer cum commodo duis assum decima duis quod est dolore mirum est
+                                    possim gothica doming lectorum in typi euismod option adipiscing nulla tincidunt
+                                    claritatem sit nam velit in futurum qui</p>
+
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer possim tempor seacula
+                                    formas lectorum dolor dolor tincidunt eum gothica euismod parum vel est in hendrerit
+                                    dolore mazim facer cum commodo duis assum decima duis quod est dolore mirum est
+                                    possim gothica doming lectorum in typi euismod option adipiscing nulla tincidunt
+                                    claritatem sit nam velit in futurum qui</p>
+
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer possim tempor seacula
+                                    formas lectorum dolor dolor tincidunt eum gothica euismod parum vel est in hendrerit
+                                    dolore mazim facer cum commodo duis assum decima duis quod est dolore mirum est
+                                    possim gothica doming lectorum in typi euismod option adipiscing nulla tincidunt
+                                    claritatem sit nam velit in futurum qui</p>
+
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer possim tempor seacula
+                                    formas lectorum dolor dolor tincidunt eum gothica euismod parum vel est in hendrerit
+                                    dolore mazim facer cum commodo duis assum decima duis quod est dolore mirum est
+                                    possim gothica doming lectorum in typi euismod option adipiscing nulla tincidunt
+                                    claritatem sit nam velit in futurum qui</p>
+
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer possim tempor seacula
+                                    formas lectorum dolor dolor tincidunt eum gothica euismod parum vel est in hendrerit
+                                    dolore mazim facer cum commodo duis assum decima duis quod est dolore mirum est
+                                    possim gothica doming lectorum in typi euismod option adipiscing nulla tincidunt
+                                    claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container card__container--closed">
+
+                        <section class="card__section__header">
+                            <svg class="card__header-image" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+                                 preserveAspectRatio="xMidYMid slice">
+                                <!-- SVG Image -->
+                                <defs>
+                                    <clipPath id="clipPath2">
+                                        <!-- r = 992 hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath2)" width="1920" height="500"
+                                       xlink:href="/app/img/story-cards/b.png"></image>
+                            </svg>
+                        </section>
+
+                        <section class="card__section__content">
+
+                            <i class="card__button-close fa fa-times">X</i>
+
+                            <div class="card__caption-container">
+                                <h1 class="card__title">Chariots de Feu</h1>
+
+                                <p class="card__subtitle">paraboles du maître</p>
+                            </div>
+
+                            <div class="card__meta">
+                                <img class="meta__avatar" src="/app/img/authors/brian.jpeg" alt="Brian"/>
+                                <span class="meta__author">Brian Sipple</span>
+                                <span class="meta__date">09/30/1589</span>
+                            </div>
+
+                            <div class="card__text-section__intro">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                            <div class="card__text-section__main">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container card__container--closed">
+
+                        <section class="card__section__header">
+                            <svg class="card__header-image" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+                                 preserveAspectRatio="xMidYMid slice">
+                                <!-- SVG Image -->
+                                <defs>
+                                    <clipPath id="clipPath3">
+                                        <!-- r = 992 hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath3)" width="1920" height="500"
+                                       xlink:href="/app/img/story-cards/c.png"></image>
+                            </svg>
+                        </section>
+
+                        <section class="card__section__content">
+
+                            <i class="card__button-close fa fa-times">X</i>
+
+                            <div class="card__caption-container">
+                                <h1 class="card__title">Chariots de Feu</h1>
+
+                                <p class="card__subtitle">paraboles du maître</p>
+                            </div>
+
+                            <div class="card__meta">
+                                <img class="meta__avatar" src="/app/img/authors/brian.jpeg" alt="Brian"/>
+                                <span class="meta__author">Brian Sipple</span>
+                                <span class="meta__date">09/30/1589</span>
+                            </div>
+
+                            <div class="card__text-section__intro">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                            <div class="card__text-section__main">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container card__container--closed">
+
+                        <section class="card__section__header">
+                            <svg class="card__header-image" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+                                 preserveAspectRatio="xMidYMid slice">
+                                <!-- SVG Image -->
+                                <defs>
+                                    <clipPath id="clipPath4">
+                                        <!-- r = 992 hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath4)" width="1920" height="500"
+                                       xlink:href="/app/img/story-cards/d.png"></image>
+                            </svg>
+                        </section>
+
+                        <section class="card__section__content">
+
+                            <i class="card__button-close fa fa-times">X</i>
+
+                            <div class="card__caption-container">
+                                <h1 class="card__title">Chariots de Feu</h1>
+
+                                <p class="card__subtitle">paraboles du maître</p>
+                            </div>
+
+                            <div class="card__meta">
+                                <img class="meta__avatar" src="/app/img/authors/brian.jpeg" alt="Brian"/>
+                                <span class="meta__author">Brian Sipple</span>
+                                <span class="meta__date">09/30/1589</span>
+                            </div>
+
+                            <div class="card__text-section__intro">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                            <div class="card__text-section__main">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container card__container--closed">
+
+                        <section class="card__section__header">
+                            <svg class="card__header-image" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+                                 preserveAspectRatio="xMidYMid slice">
+                                <!-- SVG Image -->
+                                <defs>
+                                    <clipPath id="clipPath5">
+                                        <!-- r = 992 hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath5)" width="1920" height="500"
+                                       xlink:href="/app/img/story-cards/a.png"></image>
+                            </svg>
+                        </section>
+
+                        <section class="card__section__content">
+
+                            <i class="card__button-close fa fa-times">X</i>
+
+                            <div class="card__caption-container">
+                                <h1 class="card__title">Chariots de Feu</h1>
+
+                                <p class="card__subtitle">paraboles du maître</p>
+                            </div>
+
+                            <div class="card__meta">
+                                <img class="meta__avatar" src="/app/img/authors/brian.jpeg" alt="Brian"/>
+                                <span class="meta__author">Brian Sipple</span>
+                                <span class="meta__date">09/30/1589</span>
+                            </div>
+
+                            <div class="card__text-section__intro">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                            <div class="card__text-section__main">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__container card__container--closed">
+
+                        <section class="card__section__header">
+                            <svg class="card__header-image" xmlns="http://www.w3.org/2000/svg"
+                                 xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 500"
+                                 preserveAspectRatio="xMidYMid slice">
+                                <!-- SVG Image -->
+                                <defs>
+                                    <clipPath id="clipPath6">
+                                        <!-- r = 992 hyp = Math.sqrt(960*960+250*250) -->
+                                        <circle class="clip" cx="960" cy="250" r="992"></circle>
+                                    </clipPath>
+                                </defs>
+                                <image clip-path="url(#clipPath6)" width="1920" height="500"
+                                       xlink:href="/app/img/story-cards/b.png"></image>
+                            </svg>
+                        </section>
+
+                        <section class="card__section__content">
+
+                            <i class="card__button-close fa fa-times">X</i>
+
+                            <div class="card__caption-container">
+                                <h1 class="card__title">Chariots de Feu</h1>
+
+                                <p class="card__subtitle">paraboles du maître</p>
+                            </div>
+
+                            <div class="card__meta">
+                                <img class="meta__avatar" src="/app/img/authors/brian.jpeg" alt="Brian"/>
+                                <span class="meta__author">Brian Sipple</span>
+                                <span class="meta__date">09/30/1589</span>
+                            </div>
+
+                            <div class="card__text-section__intro">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                            <div class="card__text-section__main">
+                                <p>adipiscing usus consuetudium dolor claritatem eu aliquip facer</p>
+
+                                <p>possim tempor seacula formas lectorum dolor dolor tincidunt</p>
+
+                                <p>eum gothica euismod parum vel est in hendrerit</p>
+
+                                <p>dolore mazim facer cum commodo duis assum decima</p>
+
+                                <p>duis quod est dolore mirum est possim gothica</p>
+
+                                <p>doming lectorum in typi euismod option adipiscing nulla</p>
+
+                                <p>tincidunt claritatem sit nam velit in futurum qui</p>
+                            </div>
+
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+<script src="/vendor/trianglify/dist/trianglify.min.js"></script>
+<script src="/vendor/gsap/src/minified/TweenMax.min.js"></script>
+<script src="/vendor/gsap/src/minified/plugins/ScrollToPlugin.min.js"></script>
+
+<!-- Base Card model -- include this first! -->
+<script src="scripts/Card.js"></script>
+<script src="scripts/CardCircle.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+$polka-dot__color: hsla(195, 100%, 73%, 1);
+$polka-dot__background-color: hsla(0, 0%, 25%, 1);
+$polka-dot__tile-size: 30px;
+$polka-dot__gradient-percentage: 30%;
+
+/**
+ * Create a polka-dot pattern by combining two different radial gradients,
+ * and giving them different background positions
+ */
+@mixin polka($size, $bkg-color, $dot, $dot-color) {
+  background-color: $bkg-color;
+  background-image:
+    radial-gradient($dot-color $dot, transparent 0),
+    radial-gradient($dot-color $dot, transparent 0);
+  background-size: $size $size;
+  background-position: 0 0, ($size/2) ($size/2);   // the second position must be half of the tile size
+}
+
+
+.patterned-box__polka-dot {
+  @include polka(
+    $polka-dot__tile-size,
+    $polka-dot__background-color,
+    $polka-dot__gradient-percentage,
+    $polka-dot__color
+  );
+}

@@ -1,0 +1,59 @@
+$blueprint-grid__width--outer: 75px;
+$blueprint-grid__height--outer: 75px;
+$blueprint-grid__width--inner: 15px;
+$blueprint-grid__height--inner: 15px;
+
+$blueprint-grid__background-color: hsla(217, 53%, 35%, 1);
+$blueprint-grid__line-color--inner: hsla(0, 0%, 100%, 0.3);
+$blueprint-grid__line-color--outer: hsla(105, 4%, 80%, 1.0);
+$blueprint-grid__line-width--inner: 1px;
+$blueprint-grid__line-width--outer: 3px;
+
+
+/**
+ * Create a tablecloth effect by having two gradients show through each other's
+ * transparent regions
+ */
+.patterned-box__tablecloth {
+  background-color: hsla(0, 100%, 100%, 1.0);
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+                  90deg,
+                  rgba(200, 0, 0, 0.5) 50%,
+                  transparent 0
+  ),
+  linear-gradient(
+                  rgba(200, 0, 0, 0.5) 50%,
+                  transparent 0
+  );
+}
+
+/**
+ * Overlay two pairs of grid gradients -- each with different line widths and colors
+ */
+.patterned-box__blueprint {
+  background-color: $blueprint-grid__background-color;
+  background-size: $blueprint-grid__width--outer $blueprint-grid__height--outer,
+                   $blueprint-grid__width--outer $blueprint-grid__height--outer,
+                   $blueprint-grid__width--inner $blueprint-grid__height--inner,
+                   $blueprint-grid__width--inner $blueprint-grid__height--inner;
+  background-image:
+    linear-gradient(
+      90deg,
+      $blueprint-grid__line-color--outer $blueprint-grid__line-width--outer,
+      transparent 0
+    ),
+    linear-gradient(
+      $blueprint-grid__line-color--outer $blueprint-grid__line-width--outer,
+      transparent 0
+    ),
+    linear-gradient(
+      90deg,
+      $blueprint-grid__line-color--inner $blueprint-grid__line-width--inner,
+      transparent 0
+    ),
+    linear-gradient(
+      $blueprint-grid__line-color--inner $blueprint-grid__line-width--inner,
+      transparent 0
+    );
+}

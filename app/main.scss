@@ -1,0 +1,33 @@
+@import 'lib/styles/application';
+
+.main-view-container {
+    background-color: $color__theme__primary--alternate;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.link-map {
+    padding: .75em 1.25em;
+    margin: 1em auto;
+    background-color: $color__theme__accent--main;
+    width: 20em;
+    text-align: center;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.list-container {
+    ul {
+        padding: 0;
+        text-align: center;
+        list-style-type: none;
+    }
+}
+
+
