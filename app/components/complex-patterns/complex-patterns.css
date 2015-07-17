@@ -337,6 +337,16 @@ body {
   background-position: 0 0, 2.5em 2.5em;
   background-size: 5em 5em; }
 
+.patterned-box__checkerboard--svg {
+  background-color: #752100;
+  background-image: url('data:image/svg+xml,  <svg xmlns="http://www.w3.org/2000/svg"       width="100" height="100" fill-opacity=".25">       <rect x="50" y="0" width="50" height="50"></rect>       <rect x="0" y="50" width="50" height="50"></rect> </svg>');
+  background-size: 5em 5em; }
+
+.patterned-box__checkerboard--svg {
+  background-color: #752100;
+  background-image: url('data:image/svg+xml,  <svg xmlns="http://www.w3.org/2000/svg"       width="100" height="100" fill="#ffd56b">       <rect x="50" y="0" width="50" height="50"></rect>       <rect x="0" y="50" width="50" height="50"></rect> </svg>');
+  background-size: 5em 5em; }
+
 body {
   background-color: whitesmoke; }
 

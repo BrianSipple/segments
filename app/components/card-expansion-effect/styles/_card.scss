@@ -64,6 +64,7 @@
 .card__header-image {
   position: relative;
   left: 50%;
+  display: block;
   height: 100%;
   max-height: $card__image-max-height__header;
   transform: translateX(-50%);
@@ -156,11 +157,13 @@
 }
 
 .card__title {
+  font-weight: 700;
   font-size: 1.5em;
   color: $font-color__header-text__black--light-background;
 }
 
 .card__subtitle {
+  font-weight: lighter;
   color: $font-color__secondary-text__black--light-background;
   font-size: 0.95em;
 }

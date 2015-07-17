@@ -1,0 +1,17 @@
+.polygon {
+  transition: transform 300ms ease-in-out,
+              opacity 300ms ease-in-out;
+  transform: scale(1);
+  transform-origin: center bottom;
+  fill: transparent;
+}
+
+.polygon--hidden {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* disable scale on firefox */
+.ff polygon {
+  transform: scale(1) !important;
+}

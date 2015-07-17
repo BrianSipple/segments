@@ -1,0 +1,12 @@
+@import '../../lib/styles/application';
+
+$box__width: 35em;
+$box__height: 25em;
+
+[class*="random-background-box"] {
+  width: $box__width;
+  height: $box__height;
+}
+
+@import 'vertical-stripes';
+

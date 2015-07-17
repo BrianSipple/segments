@@ -17,9 +17,30 @@ $checkerboard__box-length: $patterned-box__width / 10;
 
   background-position: 0 0, $size $size;   // move the second gradient by the tile size to create a second, identical square at the first square's top-right edge
   background-size: 2*$size 2*$size;
-
 }
 
 .patterned-box__checkerboard {
   @include checkerboard($checkerboard__box-length, $checkerboard__color-1, $checkerboard__color-2);
+}
+
+.patterned-box__checkerboard--svg {
+  background-color: $checkerboard__color-1;
+  background-image: url('data:image/svg+xml,\
+  <svg xmlns="http://www.w3.org/2000/svg"\
+       width="100" height="100" fill-opacity=".25">\
+       <rect x="50" y="0" width="50" height="50"></rect>\
+       <rect x="0" y="50" width="50" height="50"></rect>\
+ </svg>');
+  background-size: 2*$checkerboard__box-length 2*$checkerboard__box-length;
+}
+
+.patterned-box__checkerboard--svg {
+  background-color: $checkerboard__color-1;
+  background-image: url('data:image/svg+xml,\
+  <svg xmlns="http://www.w3.org/2000/svg"\
+       width="100" height="100" fill="#{$checkerboard__color-2}">\
+       <rect x="50" y="0" width="50" height="50"></rect>\
+       <rect x="0" y="50" width="50" height="50"></rect>\
+ </svg>');
+  background-size: 2*$checkerboard__box-length 2*$checkerboard__box-length;
 }

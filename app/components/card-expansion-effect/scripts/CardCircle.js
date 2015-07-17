@@ -2,7 +2,7 @@
 
 var CardCircle = (function (window, undefined) {
 
-    var CardCircle = Object.create(Card);
+    var CardCircle = Card();
 
     /**
      * Slide content down
@@ -47,8 +47,9 @@ var CardCircle = (function (window, undefined) {
      */
     CardCircle._floatContainer = function (callback) {
 
-        document.body.classList.add(this.CLASSES.cardBodyHidden);
+        document.body.classList.add(this.CLASSES.bodyHidden);
 
+        debugger;
         var TL = new TimelineMax(),
             rect = this._container.getBoundingClientRect(),
             windowWidth = window.innerWidth,
@@ -57,7 +58,6 @@ var CardCircle = (function (window, undefined) {
                 width: 0,
                 x: rect.left + (rect.width / 2),
                 y: rect.top + (rect.height / 2)
-
             };
 
         TL.set(

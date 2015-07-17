@@ -1,0 +1,19 @@
+$num-stripes: 4;
+
+$color-1: hsla(294, 35%, 58%, 1);
+$color-2: hsla(18, 100%, 50%, 1);
+$color-3: hsla(352, 97%, 64%, 1);
+$color-4: hsla(112, 72%, 62%, 1);
+
+.random-background-box--vertical-stripes {
+
+  background-image: linear-gradient(
+    to right,
+    $color-1 15%, $color-2 0,
+    $color-2 40%, $color-3 0,
+    $color-3 65%, $color-4 0
+  );
+
+  background-size:
+          ($box__width / $num-stripes) 100%;
+}
