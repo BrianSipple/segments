@@ -3,9 +3,11 @@
 $box__width: 35em;
 $box__height: 25em;
 
-[class*="random-background-box"] {
-  width: $box__width;
-  height: $box__height;
+.random-background-box {
+    width: $box__width;
+    height: $box__height;
+    margin: 1.5em auto;
+    
 }
 
 @import 'vertical-stripes';

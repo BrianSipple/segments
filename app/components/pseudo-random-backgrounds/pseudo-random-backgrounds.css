@@ -238,10 +238,6 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -254,62 +250,83 @@ body {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-                                      http://www.sanbeiji.com/archives/953 */
+                                          http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group; }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
-[class*="random-background-box"] {
-  width: 35em;
-  height: 25em; }
 
-.random-background-box--vertical-stripes {
-  background-image: linear-gradient(to right, #b26eb9 15%, #ff4d00 0, #ff4d00 40%, #fc4a62 0, #fc4a62 65%, #6be458 0);
+.random-background-box {
+  width: 35em;
+  height: 25em;
+  margin: 1.5em auto; }
+
+.random-background-box {
+  /**
+     * Initial non-solution of using a linear gradient consiting of vertical stripes
+     */
+  /**
+     * SOLUTION 1: Enhances the illusion of randomness by splitting the flat 
+     * stripe tile into layers: one base color and three layers of 
+     * stripes, repeating in different intervals.
+     *
+     *
+     * SHORTCOMING: At some point, however, a repeating pattern still emerges.
+     * This point is the Least-Common Multiple of the background-sized slices -- 
+     * in this case at (LCM of 80, 60, and 40 is) 240px
+     */
+  /**
+     * SOLUTION 2: In response to the previous solution's shortcoming, we
+     * can maximize the size interval over which our slices appear to repeat.
+     *
+     * To acheive the maximum LCM, the numbers must be relatively prime (the LCM is their product!)
+     */ }
+
+.random-background-box.flat-vertical-stripes {
+  background-image: linear-gradient(to right, #f2c57d 15%, #55494e 0, #55494e 40%, #db334f 0, #db334f 65%, #3c305a 0);
   background-size: 8.75em 100%; }
 
-/*# sourceMappingURL=pseudo-random-backgrounds.css.map */
+.random-background-box.background-layering {
+  background-color: #a29b9a;
+  background-image: linear-gradient(90deg, #f2c57d 10px, transparent 0), linear-gradient(90deg, #55494e 20px, transparent 0), linear-gradient(90deg, #db334f 20px, transparent 0);
+  background-size: 80px 100%, 60px 100%, 40px 100%; }
+
+.random-background-box.background-layering--prime-intervals {
+  background-color: #a29b9a;
+  background-image: linear-gradient(90deg, #f2c57d 11px, transparent 0), linear-gradient(90deg, #55494e 23px, transparent 0), linear-gradient(90deg, #db334f 41px, transparent 0);
+  background-size: 41px 100%, 61px 100%, 83px 100%; }
