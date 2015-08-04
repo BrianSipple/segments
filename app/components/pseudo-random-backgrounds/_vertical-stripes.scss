@@ -1,19 +1,72 @@
 $num-stripes: 4;
 
-$color-1: hsla(294, 35%, 58%, 1);
-$color-2: hsla(18, 100%, 50%, 1);
-$color-3: hsla(352, 97%, 64%, 1);
-$color-4: hsla(112, 72%, 62%, 1);
+$color-1: hsla(9, 4%, 62%, 1);
+$color-2: hsla(37, 82%, 72%, 1);
+$color-3: hsla(337, 8%, 31%, 1);
+$color-4: hsla(350, 70%, 53%, 1);
+$color-5: hsla(257, 30%, 27%, 1);
 
-.random-background-box--vertical-stripes {
 
-  background-image: linear-gradient(
-    to right,
-    $color-1 15%, $color-2 0,
-    $color-2 40%, $color-3 0,
-    $color-3 65%, $color-4 0
-  );
+.random-background-box {
+    
+    
+    /**
+     * Initial non-solution of using a linear gradient consiting of vertical stripes
+     */    
+    &.flat-vertical-stripes {
+                
+        background-image: linear-gradient(
+        to right,
+        $color-2 15%, $color-3 0,
+        $color-3 40%, $color-4 0,
+        $color-4 65%, $color-5 0
+        );
 
-  background-size:
-          ($box__width / $num-stripes) 100%;
+        background-size: ($box__width / $num-stripes) 100%;                    
+    }
+
+    /**
+     * SOLUTION 1: Enhances the illusion of randomness by splitting the flat 
+     * stripe tile into layers: one base color and three layers of 
+     * stripes, repeating in different intervals.
+     *
+     *
+     * SHORTCOMING: At some point, however, a repeating pattern still emerges.
+     * This point is the Least-Common Multiple of the background-sized slices -- 
+     * in this case at (LCM of 80, 60, and 40 is) 240px
+     */
+    &.background-layering {
+        background-color: $color-1;
+        background-image: 
+            linear-gradient(90deg, $color-2 10px, transparent 0),
+            linear-gradient(90deg, $color-3 20px, transparent 0),
+            linear-gradient(90deg, $color-4 20px, transparent 0);
+        
+        background-size: 80px 100%, 60px 100%, 40px 100%;                        
+    }
+    
+    /**
+     * SOLUTION 2: In response to the previous solution's shortcoming, we
+     * can maximize the size interval over which our slices appear to repeat.
+     *
+     * To acheive the maximum LCM, the numbers must be relatively prime (the LCM is their product!)
+     */
+    &.background-layering--prime-intervals {
+        background-color: $color-1;
+        background-image: 
+            linear-gradient(90deg, $color-2 11px, transparent 0),
+            linear-gradient(90deg, $color-3 23px, transparent 0),
+            linear-gradient(90deg, $color-4 41px, transparent 0);
+        
+        background-size: 41px 100%, 61px 100%, 83px 100%;
+    }
+    
+    
+    
+    
 }
+
+
+
+
+
