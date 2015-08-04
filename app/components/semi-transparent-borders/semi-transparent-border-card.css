@@ -311,9 +311,8 @@ body {
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: scroll; }
-
-.link-map h2 {
-  text-align: center; }
+  .link-map h2 {
+    text-align: center; }
 
 .list-container ul {
   padding: 0;
@@ -330,7 +329,6 @@ body {
   text-align: center;
   background-color: white;
   font: 100%/1.5 sans-serif; }
-
-.card.semi-trans {
-  border: 10px solid rgba(255, 255, 255, 0.5);
-  background-clip: padding-box; }
+  .card.semi-trans {
+    border: 10px solid rgba(255, 255, 255, 0.5);
+    background-clip: padding-box; }

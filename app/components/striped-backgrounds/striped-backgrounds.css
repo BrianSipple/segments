@@ -312,23 +312,18 @@ body {
      * color functioning as a fallback color for browsers that don’t support CSS gradients.
      *
      */ }
-
-[class^="striped-box"][class*="horizontal"] {
-  background-size: 100% 19%;
-  /* The repeating background will create our striping appearance, since the size only stretches partially down the y-axis */ }
-
-[class^="striped-box"][class*="vertical"] {
-  background-size: 19% 100%;
-  background-image: linear-gradient(to right, #00f6ff 50%, #ffea00 0%); }
-
-[class^="striped-box"].toned {
-  background-color: #00f6ff; }
-
-[class^="striped-box"].toned[class*="angle__30"] {
-  background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 15px, transparent 0, transparent 30px); }
-
-[class^="striped-box"][class*="angle__45"] {
-  /**
+  [class^="striped-box"][class*="horizontal"] {
+    background-size: 100% 19%;
+    /* The repeating background will create our striping appearance, since the size only stretches partially down the y-axis */ }
+  [class^="striped-box"][class*="vertical"] {
+    background-size: 19% 100%;
+    background-image: linear-gradient(to right, #00f6ff 50%, #ffea00 0%); }
+  [class^="striped-box"].toned {
+    background-color: #00f6ff; }
+    [class^="striped-box"].toned[class*="angle__30"] {
+      background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 15px, transparent 0, transparent 30px); }
+  [class^="striped-box"][class*="angle__45"] {
+    /**
          * For diagonal striping, the background-size will be the length
          * of the hypotenuse -- since within a square, the stripes will end as 45deg right triangles).
          *
@@ -337,11 +332,10 @@ body {
          *
          * So... for a 15px-width diagonal stripe...
          */
-  background-size: 42.43px 42.43px;
-  background-image: repeating-linear-gradient(45deg, #00f6ff 0%, #00f6ff 25%, #ffea00 0%, #ffea00 50%); }
-
-[class^="striped-box"][class*="angle__60"] {
-  background-image: repeating-linear-gradient(60deg, #00f6ff, #00f6ff 12%, #ffea00, #ffea00 24%); }
+    background-size: 42.43px 42.43px;
+    background-image: repeating-linear-gradient(45deg, #00f6ff 0%, #00f6ff 25%, #ffea00 0%, #ffea00 50%); }
+  [class^="striped-box"][class*="angle__60"] {
+    background-image: repeating-linear-gradient(60deg, #00f6ff, #00f6ff 12%, #ffea00, #ffea00 24%); }
 
 [class^="striped-box_offset"] {
   background-image: linear-gradient(#00f6ff 30%, #ffea00 0%); }
