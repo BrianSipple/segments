@@ -296,53 +296,48 @@ body {
   h3 {
     page-break-after: avoid; } }
 
-.main-view-container {
-  background-color: #f8f8f2;
+.tab-selectors {
+  background-color: #787d82;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  font-size: 0.875em;
+  font-weight: 500;
   overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-
-.link-map {
-  padding: 0.75em 1.25em;
-  margin: 1em auto;
-  background-color: #16d48b;
-  width: 20em;
-  text-align: center;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-  .link-map h2 {
-    text-align: center; }
-
-.list-container ul {
-  padding: 0;
-  text-align: center;
-  list-style-type: none; }
-
-body {
-  background-color: palegoldenrod; }
-
-.card {
-  width: 20em;
-  background-color: #2cedcd;
-  text-align: center;
-  margin: 4em auto;
-  padding: 0.8em 1em;
-  /*
-     * For EXACTLY 2 borders, combining a border with an outline can arguably give us more
-     * flexibility (i.e: the ability to use dashed borders and control outline-offset
-     */ }
-  .card.box-shadow-bordered {
-    /* Allow proper padding so we can inset the box-shadow borders, but still have
-         * our element appear to be sized as it would have been otherwise -- but now
-         * the box-shadows can register click events as well
-         */
-    padding: 2.8em 3em;
-    box-shadow: inset 0 0 0 1em black, inset 0 0 0 1.42857em white, inset 0 0 0 1.66667em #fbff00, inset 0 0 0 2.5em deeppink, inset 0 0 0.4em 2.5em rgba(0, 0, 0, 0.2); }
-  .card.outline-bordered {
-    border: 1em solid #4635de;
-    outline: 1.25em solid rgba(53, 138, 222, 0.8); }
-    .card.outline-bordered.stitched {
-      border: 1em solid #4635de;
-      outline: 0.25em dashed rgba(90, 164, 221, 0.8);
-      outline-offset: -.6em; }
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; }
+  .tab-selectors .tab-selectors__content {
+    height: 100%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1; }
+  .tab-selectors .tab-selectors__tab-list {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .tab-selectors .tab {
+    position: relative;
+    padding: 0 0.75em;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+    flex-basis: 0.000000001px;
+    align-items: center; }
+    .tab-selectors .tab .tab__link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.62);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%; }
+    .tab-selectors .tab.active .tab__link {
+      color: #49fd0d; }
