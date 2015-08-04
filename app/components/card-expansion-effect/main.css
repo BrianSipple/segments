@@ -238,10 +238,6 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -257,17 +253,13 @@ body {
                                       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
@@ -275,35 +267,30 @@ body {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
     display: table-header-group; }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
+
 .card {
   position: relative;
   float: left;
@@ -328,26 +315,33 @@ body {
 .card__container--closed {
   position: absolute;
   overflow: hidden; }
-  .card__container--closed .card__header-image {
-    cursor: pointer; }
-  .card__container--closed .card__section__content {
-    margin-top: 0;
-    padding: 0.33em 1em;
-    pointer-events: none;
-    background: transparent; }
-  .card__container--closed .card__caption-container {
-    font-size: 1em;
-    max-width: none;
-    padding: 30px 10px;
-    transform: translateY(-100%); }
-  .card__container--closed .card__title {
-    color: white; }
-  .card__container--closed .card__subtitle {
-    color: white; }
-  .card__container--closed .card__button-close {
-    opacity: 0; }
-  .card__container--closed .meta {
-    opacity: 0; }
+
+.card__container--closed .card__header-image {
+  cursor: pointer; }
+
+.card__container--closed .card__section__content {
+  margin-top: 0;
+  padding: 0.33em 1em;
+  pointer-events: none;
+  background: transparent; }
+
+.card__container--closed .card__caption-container {
+  font-size: 1em;
+  max-width: none;
+  padding: 30px 10px;
+  transform: translateY(-100%); }
+
+.card__container--closed .card__title {
+  color: white; }
+
+.card__container--closed .card__subtitle {
+  color: white; }
+
+.card__container--closed .card__button-close {
+  opacity: 0; }
+
+.card__container--closed .meta {
+  opacity: 0; }
 
 .card__header-image {
   position: relative;
@@ -383,9 +377,10 @@ body {
 .card__text-container {
   font-size: 1.25em;
   padding: 1.5625em 1.875em 6.25em; }
-  .card__text-container p:first-of-type {
-    font-size: 1.5em;
-    padding: 0 0 1em 0; }
+
+.card__text-container p:first-of-type {
+  font-size: 1.5em;
+  padding: 0 0 1em 0; }
 
 /*------------------------------------------------------------*/
 .card__button-close {
@@ -441,38 +436,38 @@ body {
   .card {
     width: 46%;
     padding-bottom: 32.2%; }
-
   .card__section__header {
     max-height: 360px; }
-
   .card__section__content {
     margin-bottom: 0;
     padding-right: 1.25em;
     padding-left: 1.25em; } }
+
 @media only screen and (max-width: 580px) {
   .card {
     width: 96%;
     padding-bottom: 67.2%; } }
+
 @media only screen and (max-width: 400px) {
   .card__caption-container {
     font-size: 1.25em;
     padding: 2.15em 0 0 0; }
-
   .meta {
     padding: 0 0 1.55em 0; }
-
   .card__text-container {
     font-size: 0.9em;
     padding: 1.55em 0 6.5em 0; } }
+
 .pattern {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%; }
-  .pattern svg {
-    width: 100%;
-    height: 100%; }
+
+.pattern svg {
+  width: 100%;
+  height: 100%; }
 
 .pattern--hidden {
   visibility: hidden;

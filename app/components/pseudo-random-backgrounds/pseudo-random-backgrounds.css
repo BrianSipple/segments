@@ -316,17 +316,14 @@ body {
      *
      * To acheive the maximum LCM, the numbers must be relatively prime (the LCM is their product!)
      */ }
-
-.random-background-box.flat-vertical-stripes {
-  background-image: linear-gradient(to right, #f2c57d 15%, #55494e 0, #55494e 40%, #db334f 0, #db334f 65%, #3c305a 0);
-  background-size: 8.75em 100%; }
-
-.random-background-box.background-layering {
-  background-color: #a29b9a;
-  background-image: linear-gradient(90deg, #f2c57d 10px, transparent 0), linear-gradient(90deg, #55494e 20px, transparent 0), linear-gradient(90deg, #db334f 20px, transparent 0);
-  background-size: 80px 100%, 60px 100%, 40px 100%; }
-
-.random-background-box.background-layering--prime-intervals {
-  background-color: #a29b9a;
-  background-image: linear-gradient(90deg, #f2c57d 11px, transparent 0), linear-gradient(90deg, #55494e 23px, transparent 0), linear-gradient(90deg, #db334f 41px, transparent 0);
-  background-size: 41px 100%, 61px 100%, 83px 100%; }
+  .random-background-box.flat-vertical-stripes {
+    background-image: linear-gradient(to right, #f2c57d 15%, #55494e 0, #55494e 40%, #db334f 0, #db334f 65%, #3c305a 0);
+    background-size: 8.75em 100%; }
+  .random-background-box.background-layering {
+    background-color: #a29b9a;
+    background-image: linear-gradient(90deg, #f2c57d 10px, transparent 0), linear-gradient(90deg, #55494e 20px, transparent 0), linear-gradient(90deg, #db334f 20px, transparent 0);
+    background-size: 80px 100%, 60px 100%, 40px 100%; }
+  .random-background-box.background-layering--prime-intervals {
+    background-color: #a29b9a;
+    background-image: linear-gradient(90deg, #f2c57d 11px, transparent 0), linear-gradient(90deg, #55494e 23px, transparent 0), linear-gradient(90deg, #db334f 41px, transparent 0);
+    background-size: 41px 100%, 61px 100%, 83px 100%; }

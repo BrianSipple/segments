@@ -238,10 +238,6 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -257,17 +253,13 @@ body {
                                       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
@@ -275,35 +267,30 @@ body {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
     display: table-header-group; }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
+
 .main-view-container {
   background-color: #f8f8f2;
   overflow: hidden;
@@ -311,7 +298,7 @@ body {
   overflow-y: scroll; }
 
 .link-map {
-  padding: .75em 1.25em;
+  padding: 0.75em 1.25em;
   margin: 1em auto;
   background-color: #16d48b;
   width: 20em;
@@ -319,8 +306,9 @@ body {
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: scroll; }
-  .link-map h2 {
-    text-align: center; }
+
+.link-map h2 {
+  text-align: center; }
 
 .list-container ul {
   padding: 0;
@@ -337,8 +325,9 @@ body {
   text-align: center;
   background-color: white;
   font: 100%/1.5 sans-serif; }
-  .card.semi-trans {
-    border: 10px solid rgba(255, 255, 255, 0.5);
-    background-clip: padding-box; }
+
+.card.semi-trans {
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  background-clip: padding-box; }
 
 /*# sourceMappingURL=semi-transparent-border-card.css.map */

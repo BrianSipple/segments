@@ -239,10 +239,6 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -258,17 +254,13 @@ body {
                                       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
@@ -276,35 +268,30 @@ body {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
     display: table-header-group; }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
+
 [class^="striped-box"] {
   margin: 2em auto;
   width: 25em;
@@ -320,18 +307,23 @@ body {
    * color functioning as a fallback color for browsers that don’t support CSS gradients.
    *
    */ }
-  [class^="striped-box"][class*="horizontal"] {
-    background-size: 100% 19%;
-    /* The repeating background will create our striping appearance, since the size only stretches partially down the y-axis */ }
-  [class^="striped-box"][class*="vertical"] {
-    background-size: 19% 100%;
-    background-image: linear-gradient(to right, #00f6ff 50%, #ffea00 0%); }
-  [class^="striped-box"].toned {
-    background-color: #00f6ff; }
-    [class^="striped-box"].toned[class*="angle__30"] {
-      background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 15px, transparent 0, transparent 30px); }
-  [class^="striped-box"][class*="angle__45"] {
-    /**
+
+[class^="striped-box"][class*="horizontal"] {
+  background-size: 100% 19%;
+  /* The repeating background will create our striping appearance, since the size only stretches partially down the y-axis */ }
+
+[class^="striped-box"][class*="vertical"] {
+  background-size: 19% 100%;
+  background-image: linear-gradient(to right, #00f6ff 50%, #ffea00 0%); }
+
+[class^="striped-box"].toned {
+  background-color: #00f6ff; }
+
+[class^="striped-box"].toned[class*="angle__30"] {
+  background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 15px, transparent 0, transparent 30px); }
+
+[class^="striped-box"][class*="angle__45"] {
+  /**
      * For diagonal striping, the background-size will be the length
      * of the hypotenuse -- since within a square, the stripes will end as 45deg right triangles).
      *
@@ -340,10 +332,11 @@ body {
      *
      * So... for a 15px-width diagonal stripe...
      */
-    background-size: 42.43px 42.43px;
-    background-image: repeating-linear-gradient(45deg, #00f6ff 0%, #00f6ff 25%, #ffea00 0%, #ffea00 50%); }
-  [class^="striped-box"][class*="angle__60"] {
-    background-image: repeating-linear-gradient(60deg, #00f6ff, #00f6ff 12%, #ffea00, #ffea00 24%); }
+  background-size: 42.43px 42.43px;
+  background-image: repeating-linear-gradient(45deg, #00f6ff 0%, #00f6ff 25%, #ffea00 0%, #ffea00 50%); }
+
+[class^="striped-box"][class*="angle__60"] {
+  background-image: repeating-linear-gradient(60deg, #00f6ff, #00f6ff 12%, #ffea00, #ffea00 24%); }
 
 [class^="striped-box_offset"] {
   background-image: linear-gradient(#00f6ff 30%, #ffea00 0%); }
@@ -353,3 +346,4 @@ body {
   background-image: linear-gradient(#00f6ff 33.3%, #ffea00 66.6%, #ff6bce 0); }
 
 /*# sourceMappingURL=striped-backgrounds.css.map */
+f6ff 33.3%, #ffea00 66.6%, #ff6bce 0); }

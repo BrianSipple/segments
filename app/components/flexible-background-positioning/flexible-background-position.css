@@ -238,10 +238,6 @@ body {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */ }
-@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
@@ -257,17 +253,13 @@ body {
                                       http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
-
   a,
   a:visited {
     text-decoration: underline; }
-
   a[href]:after {
     content: " (" attr(href) ")"; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; }
-
   /*
    * Don't show links that are fragment identifiers,
    * or use the `javascript:` pseudo protocol
@@ -275,35 +267,30 @@ body {
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
-
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
-
   /*
    * Printing Tables:
    * http://css-discuss.incutio.com/wiki/Printing_Tables
    */
   thead {
     display: table-header-group; }
-
   tr,
   img {
     page-break-inside: avoid; }
-
   img {
     max-width: 100% !important; }
-
   p,
   h2,
   h3 {
     orphans: 3;
     widows: 3; }
-
   h2,
   h3 {
     page-break-after: avoid; } }
+
 .main-view-container {
   background-color: #f8f8f2;
   overflow: hidden;
@@ -311,7 +298,7 @@ body {
   overflow-y: scroll; }
 
 .link-map {
-  padding: .75em 1.25em;
+  padding: 0.75em 1.25em;
   margin: 1em auto;
   background-color: #16d48b;
   width: 20em;
@@ -319,8 +306,9 @@ body {
   overflow: hidden;
   overflow-x: hidden;
   overflow-y: scroll; }
-  .link-map h2 {
-    text-align: center; }
+
+.link-map h2 {
+  text-align: center; }
 
 .list-container ul {
   padding: 0;
@@ -337,19 +325,24 @@ body {
   margin: 1em auto;
   color: rgba(0, 0, 0, 0.89);
   background: #57ff62 center no-repeat; }
-  .card.background-logo {
-    background: #57ff62 no-repeat bottom right url("../../img/globe.svg"); }
-    .card.background-logo.padding-matched-positioning {
-      /* Solution one: include offset values with the position assignments */
-      background-position: right 1em bottom 0.8em; }
-    .card.background-logo.content-box-positioning {
-      /* Solution two: map background-origin to the content-box, and background-position will match padded content automatically */
-      background-origin: content-box; }
-    .card.background-logo.calc-method-positioning {
-      /*
+
+.card.background-logo {
+  background: #57ff62 no-repeat bottom right url("../../img/globe.svg"); }
+
+.card.background-logo.padding-matched-positioning {
+  /* Solution one: include offset values with the position assignments */
+  background-position: right 1em bottom 0.8em; }
+
+.card.background-logo.content-box-positioning {
+  /* Solution two: map background-origin to the content-box, and background-position will match padded content automatically */
+  background-origin: content-box; }
+
+.card.background-logo.calc-method-positioning {
+  /*
        * Solution three: calc() the background position as a less the full width and height of the
        * background (i.e., without using explicit "right" or "bottom" identifiers
        */
-      background-position: calc(100% - 0.8em) calc(100% - 1em); }
+  background-position: calc(100% - 0.8em) calc(100% - 1em); }
 
 /*# sourceMappingURL=flexible-background-position.css.map */
+ - 1em); }
