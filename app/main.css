@@ -161,6 +161,11 @@ body {
   overflow-y: scroll;
   overflow-x: hidden; }
 
+.container {
+  width: 100%;
+  text-align: left;
+  margin: 1em; }
+
 /* Wrapper for a block of content */
 .content {
   margin: 0 auto;

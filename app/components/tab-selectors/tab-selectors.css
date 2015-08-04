@@ -296,50 +296,48 @@ body {
   h3 {
     page-break-after: avoid; } }
 
-.main-view-container {
-  background-color: #f8f8f2;
+.tab-selectors {
+  background-color: #787d82;
+  color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  height: 48px;
+  font-size: 0.875em;
+  font-weight: 500;
   overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-
-.link-map {
-  padding: 0.75em 1.25em;
-  margin: 1em auto;
-  background-color: #16d48b;
-  width: 20em;
-  text-align: center;
-  overflow: hidden;
-  overflow-x: hidden;
-  overflow-y: scroll; }
-  .link-map h2 {
-    text-align: center; }
-
-.list-container ul {
-  padding: 0;
-  text-align: center;
-  list-style-type: none; }
-
-body {
-  background-color: #b7b8b7; }
-
-.card {
-  width: 22em;
-  height: 15em;
-  padding: 0.8em 1em;
-  margin: 1em auto;
-  color: rgba(0, 0, 0, 0.89);
-  background: #57ff62 center no-repeat; }
-  .card.background-logo {
-    background: #57ff62 no-repeat bottom right url("../../img/globe.svg"); }
-    .card.background-logo.padding-matched-positioning {
-      /* Solution one: include offset values with the position assignments */
-      background-position: right 1em bottom 0.8em; }
-    .card.background-logo.content-box-positioning {
-      /* Solution two: map background-origin to the content-box, and background-position will match padded content automatically */
-      background-origin: content-box; }
-    .card.background-logo.calc-method-positioning {
-      /*
-             * Solution three: calc() the background position as a less the full width and height of the
-             * background (i.e., without using explicit "right" or "bottom" identifiers
-             */
-      background-position: calc(100% - 0.8em) calc(100% - 1em); }
+  -webkit-tap-highlight-color: transparent;
+  user-select: none; }
+  .tab-selectors .tab-selectors__content {
+    height: 100%;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    flex: 1; }
+  .tab-selectors .tab-selectors__tab-list {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+  .tab-selectors .tab {
+    position: relative;
+    padding: 0 0.75em;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    display: inline-flex;
+    flex: 1;
+    justify-content: center;
+    flex-basis: 0.000000001px;
+    align-items: center; }
+    .tab-selectors .tab .tab__link {
+      text-decoration: none;
+      color: rgba(255, 255, 255, 0.62);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%; }
+    .tab-selectors .tab.active .tab__link {
+      color: #49fd0d; }

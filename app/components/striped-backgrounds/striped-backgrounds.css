@@ -162,6 +162,11 @@ body {
   overflow-y: scroll;
   overflow-x: hidden; }
 
+.container {
+  width: 100%;
+  text-align: left;
+  margin: 1em; }
+
 /* Wrapper for a block of content */
 .content {
   margin: 0 auto;
@@ -251,7 +256,7 @@ body {
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster:
-                                      http://www.sanbeiji.com/archives/953 */
+                                          http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important; }
   a,
@@ -262,9 +267,9 @@ body {
   abbr[title]:after {
     content: " (" attr(title) ")"; }
   /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
@@ -273,9 +278,9 @@ body {
     border: 1px solid #999;
     page-break-inside: avoid; }
   /*
-   * Printing Tables:
-   * http://css-discuss.incutio.com/wiki/Printing_Tables
-   */
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
   thead {
     display: table-header-group; }
   tr,
@@ -299,44 +304,38 @@ body {
   background-image: linear-gradient(#00f6ff 50%, #ffea00 0%);
   /* that if we set the second color’s position at 0, its position will be adjusted by the browser to be equal to the position of the previous color stop. */
   /**
-   * This technique allows us to create stripes that share the same primary color, but
-   * just use a different hue. We just set one color -- the darker color -- one the
-   * background-color, then set the gradient to be stripes of semi-transparent white.
-   *
-   * We can now change the color in only one place. We also get the added beneit of our base
-   * color functioning as a fallback color for browsers that don’t support CSS gradients.
-   *
-   */ }
-
-[class^="striped-box"][class*="horizontal"] {
-  background-size: 100% 19%;
-  /* The repeating background will create our striping appearance, since the size only stretches partially down the y-axis */ }
-
-[class^="striped-box"][class*="vertical"] {
-  background-size: 19% 100%;
-  background-image: linear-gradient(to right, #00f6ff 50%, #ffea00 0%); }
-
-[class^="striped-box"].toned {
-  background-color: #00f6ff; }
-
-[class^="striped-box"].toned[class*="angle__30"] {
-  background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 15px, transparent 0, transparent 30px); }
-
-[class^="striped-box"][class*="angle__45"] {
-  /**
-     * For diagonal striping, the background-size will be the length
-     * of the hypotenuse -- since within a square, the stripes will end as 45deg right triangles).
+     * This technique allows us to create stripes that share the same primary color, but
+     * just use a different hue. We just set one color -- the darker color -- one the
+     * background-color, then set the gradient to be stripes of semi-transparent white.
      *
-     * To achieve our desired stripe width, a, we need to set the background size as 2a * sqrt(2)
-     * ( because hypotenuse = sqrt(a^2 + b^2) === sqrt(2a^2) === a * sqrt(2) )
+     * We can now change the color in only one place. We also get the added beneit of our base
+     * color functioning as a fallback color for browsers that don’t support CSS gradients.
      *
-     * So... for a 15px-width diagonal stripe...
-     */
-  background-size: 42.43px 42.43px;
-  background-image: repeating-linear-gradient(45deg, #00f6ff 0%, #00f6ff 25%, #ffea00 0%, #ffea00 50%); }
-
-[class^="striped-box"][class*="angle__60"] {
-  background-image: repeating-linear-gradient(60deg, #00f6ff, #00f6ff 12%, #ffea00, #ffea00 24%); }
+     */ }
+  [class^="striped-box"][class*="horizontal"] {
+    background-size: 100% 19%;
+    /* The repeating background will create our striping appearance, since the size only stretches partially down the y-axis */ }
+  [class^="striped-box"][class*="vertical"] {
+    background-size: 19% 100%;
+    background-image: linear-gradient(to right, #00f6ff 50%, #ffea00 0%); }
+  [class^="striped-box"].toned {
+    background-color: #00f6ff; }
+    [class^="striped-box"].toned[class*="angle__30"] {
+      background-image: repeating-linear-gradient(30deg, rgba(255, 255, 255, 0.33) 0%, rgba(255, 255, 255, 0.33) 15px, transparent 0, transparent 30px); }
+  [class^="striped-box"][class*="angle__45"] {
+    /**
+         * For diagonal striping, the background-size will be the length
+         * of the hypotenuse -- since within a square, the stripes will end as 45deg right triangles).
+         *
+         * To achieve our desired stripe width, a, we need to set the background size as 2a * sqrt(2)
+         * ( because hypotenuse = sqrt(a^2 + b^2) === sqrt(2a^2) === a * sqrt(2) )
+         *
+         * So... for a 15px-width diagonal stripe...
+         */
+    background-size: 42.43px 42.43px;
+    background-image: repeating-linear-gradient(45deg, #00f6ff 0%, #00f6ff 25%, #ffea00 0%, #ffea00 50%); }
+  [class^="striped-box"][class*="angle__60"] {
+    background-image: repeating-linear-gradient(60deg, #00f6ff, #00f6ff 12%, #ffea00, #ffea00 24%); }
 
 [class^="striped-box_offset"] {
   background-image: linear-gradient(#00f6ff 30%, #ffea00 0%); }
@@ -344,6 +343,3 @@ body {
 [class^="striped-box_triple"] {
   background-size: 100% 40%;
   background-image: linear-gradient(#00f6ff 33.3%, #ffea00 66.6%, #ff6bce 0); }
-
-/*# sourceMappingURL=striped-backgrounds.css.map */
-f6ff 33.3%, #ffea00 66.6%, #ff6bce 0); }
