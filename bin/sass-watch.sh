@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo 'Starting SASS watch'
-sass --watch app/main.scss:app/main.css app/components:app/components
+echo 'Beginning SASS watch'
+node-sass --watch --recursive app/components/ --output app/components/
+
+exit 0
